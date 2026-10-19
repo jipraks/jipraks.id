@@ -1,67 +1,68 @@
-// Indonesian lives in the HTML (it is what shows without JavaScript).
-// On load it is read from the DOM, so only English is written here.
+// English lives in the HTML (it is the default, and what shows without JavaScript).
+// On load it is read from the DOM, so only Indonesian is written here.
+// Indonesian is picked when the browser's first preferred language is Indonesian.
 (function () {
-  var EN = {
+  var ID = {
     meta: {
-      title: "PT Jipraks Digital Indonesia · Apps, automation, AI, and training",
-      description: "PT Jipraks Digital Indonesia builds apps, automation, and AI solutions for businesses in Indonesia, and trains teams to run them."
+      title: "PT Jipraks Digital Indonesia · Aplikasi, otomasi, AI, dan pelatihan",
+      description: "PT Jipraks Digital Indonesia mengembangkan aplikasi, otomasi, dan solusi AI untuk bisnis di Indonesia, serta melatih tim untuk memakainya."
     },
     text: {
-      skip: "Skip to content",
-      navServices: "Services",
-      navProduct: "Product",
-      navContact: "Contact",
-      heroLede: "PT Jipraks Digital Indonesia builds software for businesses in Indonesia, and trains teams to run it themselves.",
-      ctaProject: "Discuss your project",
-      ctaProduct: "See our product",
-      servicesTitle: "What we do",
-      s1Title: "App development",
-      s1Body: "Mobile and web apps, from design through release and maintenance.",
-      s2Title: "Automation",
-      s2Body: "Repetitive data entry, reports, and notifications run on their own, inside the systems you already use.",
-      s3Body: "AI built into real workflows, such as reading documents or answering customer questions.",
-      s4Title: "Training",
-      s4Body: "Training so your team can use and maintain apps, automation, and AI on their own.",
-      productKicker: "Our product",
-      productBody: "Our first product, and for now our only one: a free Android point-of-sale app for food stalls, grocery shops, coffee shops, and clothing stores.",
-      productBody2: "It records sales, stock, and finances, and keeps working without internet.",
-      productCta: "Visit FreeKasir.com",
-      rSub: "Core cashier features",
-      r1: "Sales & discounts",
-      r2: "Automatic stock",
-      r3: "Profit & loss report",
-      r4: "WhatsApp receipts",
-      r5: "Offline mode",
-      rNote: "Free forever on one device. No ads, no transaction limits.",
-      contactTitle: "Have a project, or want training for your team?",
-      contactAddress: "Address",
-      contactHelp: "FreeKasir users can reach customer support via WhatsApp from inside the app."
+      skip: "Langsung ke konten",
+      navServices: "Layanan",
+      navProduct: "Produk",
+      navContact: "Kontak",
+      heroLede: "PT Jipraks Digital Indonesia mengembangkan perangkat lunak untuk bisnis di Indonesia, dan melatih tim agar bisa memakainya sendiri.",
+      ctaProject: "Diskusikan proyek Anda",
+      ctaProduct: "Lihat produk kami",
+      servicesTitle: "Yang kami kerjakan",
+      s1Title: "Pengembangan aplikasi",
+      s1Body: "Aplikasi mobile dan web, dari rancangan sampai rilis dan pemeliharaan.",
+      s2Title: "Otomasi",
+      s2Body: "Input data, laporan, dan notifikasi yang berulang dijalankan otomatis di sistem yang sudah Anda pakai.",
+      s3Body: "AI dipasang ke proses kerja nyata, misalnya membaca dokumen atau membalas pertanyaan pelanggan.",
+      s4Title: "Pelatihan",
+      s4Body: "Pelatihan agar tim Anda bisa memakai dan merawat aplikasi, otomasi, dan AI sendiri.",
+      productKicker: "Produk kami",
+      productBody: "Produk pertama kami, dan untuk saat ini satu-satunya: aplikasi kasir Android gratis untuk warung, toko kelontong, kedai kopi, dan toko pakaian.",
+      productBody2: "Mencatat penjualan, stok, dan keuangan, dan tetap jalan tanpa internet.",
+      productCta: "Kunjungi FreeKasir.com",
+      rSub: "Fitur kasir inti",
+      r1: "Transaksi & diskon",
+      r2: "Stok otomatis",
+      r3: "Laporan laba rugi",
+      r4: "Struk via WhatsApp",
+      r5: "Mode offline",
+      rNote: "Gratis selamanya di satu perangkat. Tanpa iklan, tanpa batas transaksi.",
+      contactTitle: "Punya proyek, atau ingin pelatihan untuk tim Anda?",
+      contactAddress: "Alamat",
+      contactHelp: "Pengguna FreeKasir bisa menghubungi layanan pelanggan lewat WhatsApp dari dalam aplikasi."
     },
     html: {
-      heroTitle: 'We build apps, automation, and <span class="gradient-text">AI</span>.'
+      heroTitle: 'Kami membangun aplikasi, otomasi, dan <span class="gradient-text">AI</span>.'
     },
     aria: {
-      navLabel: "Main navigation"
+      navLabel: "Navigasi utama"
     }
   };
 
-  var ID = { meta: {}, text: {}, html: {}, aria: {} };
+  var EN = { meta: {}, text: {}, html: {}, aria: {} };
   var descTag = document.querySelector('meta[name="description"]');
-  ID.meta.title = document.title;
-  ID.meta.description = descTag ? descTag.getAttribute("content") : "";
+  EN.meta.title = document.title;
+  EN.meta.description = descTag ? descTag.getAttribute("content") : "";
 
   var textEls = document.querySelectorAll("[data-i18n]");
   var htmlEls = document.querySelectorAll("[data-i18n-html]");
   var ariaEls = document.querySelectorAll("[data-i18n-aria]");
-  textEls.forEach(function (el) { ID.text[el.dataset.i18n] = el.textContent; });
-  htmlEls.forEach(function (el) { ID.html[el.dataset.i18nHtml] = el.innerHTML; });
-  ariaEls.forEach(function (el) { ID.aria[el.dataset.i18nAria] = el.getAttribute("aria-label"); });
+  textEls.forEach(function (el) { EN.text[el.dataset.i18n] = el.textContent; });
+  htmlEls.forEach(function (el) { EN.html[el.dataset.i18nHtml] = el.innerHTML; });
+  ariaEls.forEach(function (el) { EN.aria[el.dataset.i18nAria] = el.getAttribute("aria-label"); });
 
-  var DICTS = { id: ID, en: EN };
+  var DICTS = { en: EN, id: ID };
   var buttons = document.querySelectorAll(".lang-switch button");
 
   function apply(lang) {
-    var d = DICTS[lang] || ID;
+    var d = DICTS[lang] || EN;
     document.documentElement.lang = lang;
     document.title = d.meta.title;
     if (descTag) descTag.setAttribute("content", d.meta.description);
@@ -92,6 +93,7 @@
     }
   }
 
+  // Order: ?lang= link, then the visitor's own earlier choice, then the browser language.
   function initialLang() {
     var param = new URLSearchParams(location.search).get("lang");
     if (param === "id" || param === "en") return param;
@@ -99,8 +101,8 @@
       var saved = localStorage.getItem("lang");
       if (saved === "id" || saved === "en") return saved;
     } catch (e) {}
-    var nav = (navigator.language || "id").toLowerCase();
-    return nav.indexOf("id") === 0 ? "id" : "en";
+    var first = (navigator.languages && navigator.languages[0]) || navigator.language || "en";
+    return /^(id|in)\b/i.test(first) ? "id" : "en";
   }
 
   buttons.forEach(function (b) {

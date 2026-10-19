@@ -6,7 +6,7 @@ Landing page PT Jipraks Digital Indonesia. HTML dan CSS statis, tanpa build step
 
 - `index.html`: halaman utama
 - `styles.css`: semua style dan design token
-- `i18n.js`: tombol bahasa ID / EN. Teks Indonesia ada di HTML, teks Inggris di file ini. Bisa juga dibuka langsung dengan `?lang=en`
+- `i18n.js`: tombol bahasa EN / ID. Teks Inggris (bawaan) ada di HTML, teks Indonesia di file ini. Bahasa dipilih dari `?lang=`, lalu pilihan pengunjung sebelumnya, lalu bahasa utama browser (Indonesia -> ID, selain itu EN)
 - `404.html`: halaman tidak ditemukan
 - `CNAME`: domain kustom `jipraks.id`
 
