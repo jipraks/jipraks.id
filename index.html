@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PT Jipraks Digital Indonesia · Aplikasi, otomasi, AI, dan pelatihan</title>
+  <meta name="description" content="PT Jipraks Digital Indonesia mengembangkan aplikasi, otomasi, dan solusi AI untuk bisnis di Indonesia, serta melatih tim untuk memakainya.">
+  <meta property="og:title" content="PT Jipraks Digital Indonesia">
+  <meta property="og:description" content="Aplikasi, otomasi, AI, dan pelatihan untuk bisnis di Indonesia. Apps, automation, AI, and training for businesses in Indonesia.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://jipraks.id/">
+  <meta name="theme-color" content="#FAFAFA">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Calistoga&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="i18n.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main" data-i18n="skip">Langsung ke konten</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="wordmark" href="#main">Jipraks Digital Indonesia</a>
+      <nav class="site-nav" aria-label="Navigasi utama" data-i18n-aria="navLabel">
+        <ul class="nav-list">
+          <li><a href="#layanan" data-i18n="navServices">Layanan</a></li>
+          <li><a href="#produk" data-i18n="navProduct">Produk</a></li>
+          <li><a href="#kontak" data-i18n="navContact">Kontak</a></li>
+        </ul>
+      </nav>
+      <div class="lang-switch" role="group" aria-label="Bahasa / Language">
+        <button type="button" data-lang="id" aria-pressed="true" lang="id" title="Bahasa Indonesia">ID</button>
+        <button type="button" data-lang="en" aria-pressed="false" lang="en" title="English">EN</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <h1 id="hero-title" data-i18n-html="heroTitle">Kami membangun aplikasi, otomasi, dan <span class="gradient-text">AI</span>.</h1>
+          <p class="lede" data-i18n="heroLede">PT Jipraks Digital Indonesia mengembangkan perangkat lunak untuk bisnis di Indonesia, dan melatih tim agar bisa memakainya sendiri.</p>
+          <div class="actions">
+            <a class="btn btn-primary" href="#kontak" data-i18n="ctaProject">Diskusikan proyek Anda</a>
+            <a class="btn btn-outline" href="#produk" data-i18n="ctaProduct">Lihat produk kami</a>
+          </div>
+        </div>
+
+        <section id="layanan" class="services" aria-labelledby="layanan-title">
+          <h2 id="layanan-title" class="services-title" data-i18n="servicesTitle">Yang kami kerjakan</h2>
+          <dl class="service-list">
+            <div>
+              <dt data-i18n="s1Title">Pengembangan aplikasi</dt>
+              <dd data-i18n="s1Body">Aplikasi mobile dan web, dari rancangan sampai rilis dan pemeliharaan.</dd>
+            </div>
+            <div>
+              <dt data-i18n="s2Title">Otomasi</dt>
+              <dd data-i18n="s2Body">Input data, laporan, dan notifikasi yang berulang dijalankan otomatis di sistem yang sudah Anda pakai.</dd>
+            </div>
+            <div>
+              <dt>AI</dt>
+              <dd data-i18n="s3Body">AI dipasang ke proses kerja nyata, misalnya membaca dokumen atau membalas pertanyaan pelanggan.</dd>
+            </div>
+            <div>
+              <dt data-i18n="s4Title">Pelatihan</dt>
+              <dd data-i18n="s4Body">Pelatihan agar tim Anda bisa memakai dan merawat aplikasi, otomasi, dan AI sendiri.</dd>
+            </div>
+          </dl>
+        </section>
+      </div>
+    </section>
+
+    <section id="produk" class="product" aria-labelledby="produk-title">
+      <div class="container product-grid">
+        <div class="product-intro">
+          <p class="kicker" data-i18n="productKicker">Produk kami</p>
+          <h2 id="produk-title">FreeKasir</h2>
+          <p data-i18n="productBody">Produk pertama kami, dan untuk saat ini satu-satunya: aplikasi kasir Android gratis untuk warung, toko kelontong, kedai kopi, dan toko pakaian.</p>
+          <p data-i18n="productBody2">Mencatat penjualan, stok, dan keuangan, dan tetap jalan tanpa internet.</p>
+          <a class="btn btn-primary" href="https://freekasir.com" target="_blank" rel="noopener" data-i18n="productCta">Kunjungi FreeKasir.com</a>
+        </div>
+
+        <figure class="receipt" aria-labelledby="receipt-caption">
+          <div class="receipt-head">
+            <span class="receipt-brand">FreeKasir</span>
+            <span class="receipt-sub" data-i18n="rSub">Fitur kasir inti</span>
+          </div>
+          <hr class="perforation">
+          <ul class="receipt-lines">
+            <li><span data-i18n="r1">Transaksi &amp; diskon</span><span>Rp 0</span></li>
+            <li><span data-i18n="r2">Stok otomatis</span><span>Rp 0</span></li>
+            <li><span data-i18n="r3">Laporan laba rugi</span><span>Rp 0</span></li>
+            <li><span data-i18n="r4">Struk via WhatsApp</span><span>Rp 0</span></li>
+            <li><span data-i18n="r5">Mode offline</span><span>Rp 0</span></li>
+          </ul>
+          <hr class="perforation">
+          <p class="receipt-total"><span>Total</span><span class="gradient-text">Rp 0</span></p>
+          <figcaption id="receipt-caption" class="receipt-note" data-i18n="rNote">Gratis selamanya di satu perangkat. Tanpa iklan, tanpa batas transaksi.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="kontak" class="contact" aria-labelledby="kontak-title">
+      <div class="container contact-grid">
+        <h2 id="kontak-title" data-i18n="contactTitle">Punya proyek, atau ingin pelatihan untuk tim Anda?</h2>
+        <div class="contact-details">
+          <p class="contact-row"><span class="contact-label">Email</span><a class="contact-value" href="mailto:hello@jipraks.id">hello@jipraks.id</a></p>
+          <p class="contact-row"><span class="contact-label" data-i18n="contactAddress">Alamat</span><span class="contact-value">Citra Maja City 2, Kabupaten Lebak, Banten</span></p>
+          <p class="contact-help" data-i18n="contactHelp">Pengguna FreeKasir bisa menghubungi layanan pelanggan lewat WhatsApp dari dalam aplikasi.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; 2026 PT Jipraks Digital Indonesia</p>
+    </div>
+  </footer>
+</body>
+</html>

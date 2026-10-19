@@ -1,0 +1,575 @@
+/* Tokens from the Minimalist Modern design system.
+   --accent-strong replaces #4D7CFF as the button gradient end: white on #4D7CFF is 3.72:1, on #2E66FF it is 4.71:1. */
+:root {
+  --background: #FAFAFA;
+  --foreground: #0F172A;
+  --muted: #F1F5F9;
+  --muted-foreground: #64748B;
+  --accent: #0052FF;
+  --accent-secondary: #4D7CFF;
+  --accent-strong: #2E66FF;
+  --accent-on-dark: #7FA2FF;
+  --border: #E2E8F0;
+  --card: #FFFFFF;
+  --on-dark: #FFFFFF;
+  --on-dark-muted: #CBD5E1;
+
+  --font-display: "Calistoga", Georgia, serif;
+  --font-body: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --shadow-accent: 0 4px 14px rgba(0, 82, 255, 0.25);
+  --shadow-accent-lg: 0 8px 24px rgba(0, 82, 255, 0.35);
+
+  --section-y: clamp(4.5rem, 3rem + 7vw, 9rem);
+  --ease: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+.container {
+  width: 100%;
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -4rem;
+  z-index: 10;
+  padding: 0.75rem 1rem;
+  background: var(--foreground);
+  color: var(--on-dark);
+  border-radius: var(--radius-md);
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+.gradient-text {
+  white-space: nowrap;
+  background: linear-gradient(to right, var(--accent), var(--accent-secondary));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Header: brand + language on row one, nav on row two for phones; one row from tablet up. */
+.header-inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  grid-template-areas:
+    "brand lang"
+    "nav nav";
+  align-items: center;
+  column-gap: 1rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.25rem;
+}
+
+.wordmark {
+  grid-area: brand;
+  font-family: var(--font-display);
+  font-size: clamp(1.0625rem, 0.95rem + 0.5vw, 1.375rem);
+  line-height: 1.2;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+}
+
+.site-nav {
+  grid-area: nav;
+  margin-left: -0.875rem;
+}
+
+.nav-list {
+  display: flex;
+  gap: 0.25rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.lang-switch {
+  grid-area: lang;
+  display: inline-flex;
+  gap: 2px;
+  padding: 0;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background: var(--card);
+}
+
+.lang-switch button {
+  min-width: 44px;
+  min-height: 44px;
+  padding: 0 0.625rem;
+  border: 0;
+  border-radius: 11px;
+  background: transparent;
+  color: var(--muted-foreground);
+  font: inherit;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: color 200ms ease-out, background-color 200ms ease-out;
+}
+
+.lang-switch button:hover {
+  color: var(--foreground);
+}
+
+.lang-switch button[aria-pressed="true"] {
+  background: var(--foreground);
+  color: var(--on-dark);
+}
+
+.nav-list a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 0.875rem;
+  border-radius: var(--radius-md);
+  color: var(--muted-foreground);
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 200ms ease-out, background-color 200ms ease-out;
+}
+
+.nav-list a:hover {
+  color: var(--foreground);
+  background: var(--muted);
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 3rem;
+  padding: 0 1.5rem;
+  border-radius: var(--radius-md);
+  font-weight: 500;
+  text-decoration: none;
+  text-align: center;
+  transition: transform 200ms ease-out, box-shadow 200ms ease-out, border-color 200ms ease-out, background-color 200ms ease-out, filter 200ms ease-out;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.btn-primary {
+  background: linear-gradient(to right, var(--accent), var(--accent-strong));
+  color: #FFFFFF;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-accent-lg);
+  filter: brightness(1.08);
+}
+
+.btn-outline {
+  border: 1px solid var(--border);
+  color: var(--foreground);
+  background: transparent;
+}
+
+.btn-outline:hover {
+  transform: translateY(-2px);
+  background: var(--muted);
+  border-color: rgba(0, 82, 255, 0.3);
+}
+
+/* Hero */
+.hero {
+  padding: clamp(3rem, 2rem + 5vw, 7rem) 0 var(--section-y);
+}
+
+.hero-grid {
+  display: grid;
+  gap: 3.5rem;
+  align-items: center;
+}
+
+.hero h1 {
+  font-size: clamp(2.5rem, 1.6rem + 3.8vw, 4.75rem);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  max-width: 13ch;
+}
+
+.lede {
+  margin-top: 1.5rem;
+  max-width: 34rem;
+  font-size: clamp(1.0625rem, 1rem + 0.3vw, 1.1875rem);
+  color: var(--muted-foreground);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 2.25rem;
+}
+
+/* Services: the company's four areas, an editorial list rather than four identical cards. */
+.services {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem 1.5rem 0.5rem;
+  scroll-margin-top: 1.5rem;
+}
+
+.services-title {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  line-height: 1.2;
+}
+
+.service-list {
+  margin: 1.25rem 0 0;
+}
+
+.service-list div {
+  padding: 1.125rem 0;
+  border-top: 2px dashed var(--border);
+}
+
+.service-list dt {
+  font-weight: 600;
+  font-size: 1.125rem;
+  letter-spacing: -0.01em;
+}
+
+.service-list dd {
+  margin: 0.25rem 0 0;
+  color: var(--muted-foreground);
+  line-height: 1.6;
+}
+
+/* Receipt: the identity motif. FreeKasir is a cashier app, so it introduces itself as a receipt. */
+.receipt {
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 22rem;
+  padding: 1.75rem 1.5rem 1.5rem;
+  background: var(--card);
+  color: var(--foreground);
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+  filter: drop-shadow(0 20px 25px rgba(15, 23, 42, 0.1)) drop-shadow(0 4px 6px rgba(15, 23, 42, 0.05));
+  transform: rotate(-2deg);
+  transition: transform 300ms var(--ease);
+  font-variant-numeric: tabular-nums;
+}
+
+.receipt:hover {
+  transform: rotate(0deg) translateY(-4px);
+}
+
+/* Torn bottom edge; drop-shadow on the parent follows the zigzag. */
+.receipt::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -10px;
+  height: 10px;
+  background:
+    linear-gradient(-45deg, transparent 7px, var(--card) 0) 0 0 / 14px 10px repeat-x,
+    linear-gradient(45deg, transparent 7px, var(--card) 0) 0 0 / 14px 10px repeat-x;
+}
+
+.receipt-head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.receipt-brand {
+  font-family: var(--font-display);
+  font-size: 1.75rem;
+  line-height: 1.2;
+}
+
+.receipt-sub {
+  font-size: 0.875rem;
+  color: var(--muted-foreground);
+}
+
+.perforation {
+  border: 0;
+  border-top: 2px dashed var(--border);
+  margin: 1.25rem 0;
+}
+
+.receipt-lines {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.5rem;
+  font-size: 0.9375rem;
+}
+
+.receipt-lines li,
+.receipt-total {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.receipt-lines li span:last-child {
+  color: var(--muted-foreground);
+  white-space: nowrap;
+}
+
+.receipt-total {
+  font-weight: 700;
+  font-size: 1.25rem;
+  align-items: baseline;
+}
+
+.receipt-total .gradient-text {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 2rem;
+}
+
+.receipt-note {
+  margin-top: 1rem;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: var(--muted-foreground);
+  text-align: center;
+}
+
+/* Product: the one inverted section, holding the company's only product. */
+.product {
+  background: var(--foreground);
+  color: var(--on-dark);
+  padding: var(--section-y) 0;
+}
+
+.product :focus-visible {
+  outline-color: var(--accent-on-dark);
+}
+
+.product-grid {
+  display: grid;
+  gap: 3rem;
+}
+
+.kicker {
+  color: var(--accent-on-dark);
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.product h2 {
+  font-size: clamp(2.25rem, 1.5rem + 3vw, 3.75rem);
+  line-height: 1.1;
+  margin-bottom: 1.25rem;
+}
+
+.product-intro p:not(.kicker) {
+  color: var(--on-dark-muted);
+  max-width: 32rem;
+  font-size: 1.0625rem;
+}
+
+.product-intro p + p:not(.kicker) {
+  margin-top: 1rem;
+}
+
+.product-intro .btn {
+  margin-top: 2rem;
+}
+
+/* Contact */
+.contact {
+  padding: var(--section-y) 0;
+}
+
+.contact-grid {
+  display: grid;
+  gap: 2.5rem;
+}
+
+.contact h2 {
+  font-size: clamp(2rem, 1.4rem + 2.4vw, 3.25rem);
+  line-height: 1.15;
+  max-width: 16ch;
+}
+
+.contact-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.5rem 1.5rem;
+  padding: 1rem 0;
+  border-top: 2px dashed var(--border);
+}
+
+.contact-row:last-of-type {
+  border-bottom: 2px dashed var(--border);
+}
+
+.contact-label {
+  min-width: 5rem;
+  color: var(--muted-foreground);
+}
+
+.contact-value {
+  font-weight: 600;
+  font-size: 1.0625rem;
+}
+
+a.contact-value {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  margin: -0.625rem 0;
+  color: var(--accent);
+  text-underline-offset: 0.2em;
+}
+
+a.contact-value:hover {
+  text-decoration-thickness: 2px;
+}
+
+.contact-help {
+  margin-top: 1.5rem;
+  color: var(--muted-foreground);
+  max-width: 30rem;
+}
+
+/* Footer */
+.site-footer {
+  border-top: 1px solid var(--border);
+}
+
+.footer-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem 1.5rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  font-size: 0.9375rem;
+  color: var(--muted-foreground);
+}
+
+/* Tablet: wider gutters, header on one row */
+@media (min-width: 720px) {
+  .container {
+    padding: 0 2rem;
+  }
+
+  .header-inner {
+    grid-template-columns: minmax(0, 1fr) auto auto;
+    grid-template-areas: "brand nav lang";
+    column-gap: 1.5rem;
+    min-height: 4.5rem;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .site-nav {
+    margin-left: 0;
+  }
+}
+
+/* Desktop: asymmetric grids from the design system */
+@media (min-width: 960px) {
+  .hero-grid {
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 4rem;
+  }
+
+  .product-grid {
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 5rem;
+    align-items: center;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 4rem;
+    align-items: start;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+  }
+
+  .btn-primary:hover,
+  .btn-outline:hover,
+  .receipt:hover {
+    transform: none;
+  }
+
+  .receipt:hover {
+    transform: rotate(-2deg);
+  }
+}
