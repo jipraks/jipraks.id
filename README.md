@@ -9,6 +9,15 @@ Landing page PT Jipraks Digital Indonesia. HTML dan CSS statis, tanpa build step
 - `i18n.js`: tombol bahasa EN / ID. Teks Inggris (bawaan) ada di HTML, teks Indonesia di file ini. Bahasa dipilih dari `?lang=`, lalu pilihan pengunjung sebelumnya, lalu bahasa utama browser (Indonesia -> ID, selain itu EN)
 - `404.html`: halaman tidak ditemukan
 - `CNAME`: domain kustom `jipraks.id`
+- `links.json` + `scripts/build-links.mjs`: shortlink seperti `jipraks.id/repliz`
+
+## Shortlink
+
+1. Tambah, ubah, atau hapus baris di `links.json` (`"slug": "https://tujuan"`). Slug hanya huruf kecil, angka, dan tanda `-`.
+2. Jalankan `node scripts/build-links.mjs`. Script membuat folder `<slug>/index.html` untuk tiap link, dan menghapus halaman buatannya sendiri untuk slug yang sudah tidak ada di daftar.
+3. Commit `links.json` beserta folder yang dihasilkan, lalu push.
+
+GitHub Pages tidak bisa membuat redirect 301 dari server, jadi halaman ini mengalihkan di browser (meta refresh + JavaScript). Pengunjung tetap langsung sampai di tujuan, dan cookie affiliate dipasang oleh situs tujuan seperti biasa.
 
 ## Deploy ke GitHub Pages
 
