@@ -565,8 +565,10 @@ a.contact-value:hover {
 }
 
 /* Footer */
+/* Vertical padding sits on the footer, not .footer-inner, so the .container gutter rule can't reset it. */
 .site-footer {
   border-top: 1px solid var(--border);
+  padding: 2rem 0;
 }
 
 .footer-inner {
@@ -575,8 +577,6 @@ a.contact-value:hover {
   align-items: center;
   justify-content: space-between;
   gap: 0.5rem 1.5rem;
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
   font-size: 0.9375rem;
   color: var(--muted-foreground);
 }
