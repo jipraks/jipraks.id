@@ -495,6 +495,75 @@ a.contact-value:hover {
   max-width: 30rem;
 }
 
+/* Legal pages (privacy policy, terms): one readable column, same type system. */
+.legal-header {
+  display: flex;
+  align-items: center;
+  min-height: 4.5rem;
+}
+
+.legal {
+  padding: clamp(2.5rem, 2rem + 3vw, 5rem) 0 var(--section-y);
+}
+
+.legal-inner {
+  max-width: 44rem;
+}
+
+.legal-app {
+  color: var(--accent);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.legal h1 {
+  font-size: clamp(2.25rem, 1.6rem + 2.6vw, 3.5rem);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.legal-meta {
+  margin-top: 0.75rem;
+  padding-bottom: 2rem;
+  margin-bottom: 2rem;
+  border-bottom: 2px dashed var(--border);
+  color: var(--muted-foreground);
+}
+
+.legal h2 {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 1.25rem;
+  letter-spacing: -0.01em;
+  margin: 2.5rem 0 0.75rem;
+}
+
+.legal p + p {
+  margin-top: 1rem;
+}
+
+.legal ul,
+.legal ol {
+  margin: 0.75rem 0 0;
+  padding-left: 1.25rem;
+}
+
+.legal li + li {
+  margin-top: 0.5rem;
+}
+
+.legal a {
+  color: var(--accent);
+  text-underline-offset: 0.2em;
+  overflow-wrap: anywhere;
+}
+
+.legal-related {
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 2px dashed var(--border);
+}
+
 /* Footer */
 .site-footer {
   border-top: 1px solid var(--border);
