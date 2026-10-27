@@ -13,6 +13,10 @@ Landing page PT Jipraks Digital Indonesia. HTML dan CSS statis, tanpa build step
 - `CNAME`: domain kustom `jipraks.id`
 - `links.json` + `scripts/build-links.mjs`: shortlink seperti `jipraks.id/repliz`
 
+## Cache
+
+GitHub Pages menyimpan cache file selama 10 menit. Setiap kali `styles.css`, `i18n.js`, atau `motion.js` diubah, naikkan angka `?v=` di `index.html` (dan `?v=` untuk `styles.css` di `404.html`). Tanpa itu, pengunjung lama bisa melihat HTML baru dengan CSS lama selama beberapa menit.
+
 ## Shortlink
 
 1. Tambah, ubah, atau hapus baris di `links.json` (`"slug": "https://tujuan"`). Slug hanya huruf kecil, angka, dan tanda `-`.
