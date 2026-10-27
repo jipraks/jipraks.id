@@ -5,17 +5,19 @@
   var ID = {
     meta: {
       title: "PT Jipraks Digital Indonesia · Aplikasi, otomasi, AI, dan pelatihan",
-      description: "PT Jipraks Digital Indonesia mengembangkan aplikasi, otomasi, dan solusi AI untuk bisnis di Indonesia, serta melatih tim untuk memakainya."
+      description: "PT Jipraks Digital Indonesia mengembangkan aplikasi, otomasi, dan solusi AI untuk bisnis di Indonesia, serta melatih tim untuk memakainya. Pembuat FreeKasir dan Ceritopia."
     },
     text: {
       skip: "Langsung ke konten",
       navServices: "Layanan",
-      navProduct: "Produk",
+      navProducts: "Produk",
       navContact: "Kontak",
-      heroLede: "PT Jipraks Digital Indonesia mengembangkan perangkat lunak untuk bisnis di Indonesia, dan melatih tim agar bisa memakainya sendiri.",
+      heroLede: "PT Jipraks Digital Indonesia mengembangkan perangkat lunak untuk bisnis dan keluarga di Indonesia, dan melatih tim agar bisa memakainya sendiri.",
       ctaProject: "Diskusikan proyek Anda",
-      ctaProduct: "Lihat produk kami",
+      ctaProducts: "Lihat produk kami",
+      stripLabel: "Produk kami",
       servicesTitle: "Yang kami kerjakan",
+      servicesIntro: "Kami merancang dan membangun perangkat lunaknya, lalu mengajari tim Anda menjalankannya.",
       s1Title: "Pengembangan aplikasi",
       s1Body: "Aplikasi mobile dan web, dari rancangan sampai rilis dan pemeliharaan.",
       s2Title: "Otomasi",
@@ -23,30 +25,44 @@
       s3Body: "AI dipasang ke proses kerja nyata, misalnya membaca dokumen atau membalas pertanyaan pelanggan.",
       s4Title: "Pelatihan",
       s4Body: "Pelatihan agar tim Anda bisa memakai dan merawat aplikasi, otomasi, dan AI sendiri.",
-      productKicker: "Produk kami",
-      productBody: "Produk pertama kami, dan untuk saat ini satu-satunya: aplikasi kasir Android gratis untuk warung, toko kelontong, kedai kopi, dan toko pakaian.",
-      productBody2: "Mencatat penjualan, stok, dan keuangan, dan tetap jalan tanpa internet.",
-      productCta: "Kunjungi FreeKasir.com",
-      rSub: "Fitur kasir inti",
-      r1: "Transaksi & diskon",
-      r2: "Stok otomatis",
-      r3: "Laporan laba rugi",
-      r4: "Struk via WhatsApp",
-      r5: "Mode offline",
-      rNote: "Gratis selamanya di satu perangkat. Tanpa iklan, tanpa batas transaksi.",
+      productsKicker: "Produk kami",
+      productsTitle: "Aplikasi yang kami bangun dan jalankan sendiri.",
+      fkTag: "Aplikasi kasir untuk toko kecil",
+      fkBody: "Aplikasi kasir Android gratis untuk warung, toko kelontong, kedai kopi, dan toko pakaian. Mencatat penjualan, stok, dan keuangan, dan tetap jalan tanpa internet.",
+      fk1: "Fitur kasir inti gratis selamanya di satu perangkat",
+      fk2: "Tunai, transfer bank, e-wallet, dan QRIS",
+      fk3: "Struk lewat WhatsApp atau printer Bluetooth",
+      fkCta: "Kunjungi FreeKasir.com",
+      fkPlay: "Unduh di Google Play",
+      ctTag: "Buku cerita bergambar, dibacakan untuk anak",
+      ctStatus: "Segera hadir di Google Play",
+      ctBody: "Cerita bergambar untuk anak usia 3 sampai 8 tahun, dibacakan narator dengan musik lembut dan efek suara. Anak membalik halamannya sendiri di perpustakaan kecil milik Jimmy.",
+      ct1: "Setiap profil anak bisa membaca dalam Bahasa Indonesia atau Inggris",
+      ct2: "Rak untuk fabel, petualangan, kebiasaan baik, pengetahuan, dan cerita Nusantara",
+      ct3: "Gratis, tanpa iklan, tanpa pembelian dalam aplikasi, dan tanpa chat",
+      ctCta: "Kunjungi Ceritopia.com",
       contactTitle: "Punya proyek, atau ingin pelatihan untuk tim Anda?",
       contactAddress: "Alamat",
-      contactHelp: "Pengguna FreeKasir bisa menghubungi layanan pelanggan lewat WhatsApp dari dalam aplikasi."
+      contactSupport: "Dukungan aplikasi",
+      contactHelp: "Pengguna Ceritopia bisa menulis ke help@jipraks.id. Pengguna FreeKasir bisa menghubungi layanan pelanggan lewat WhatsApp dari dalam aplikasi."
     },
     html: {
       heroTitle: 'Kami membangun aplikasi, otomasi, dan <span class="gradient-text">AI</span>.'
     },
     aria: {
-      navLabel: "Navigasi utama"
+      navLabel: "Navigasi utama",
+      stageLabel: "Tampilan aplikasi FreeKasir dan Ceritopia"
+    },
+    alt: {
+      altFkHome: "Beranda FreeKasir dengan total pesanan, penjualan hari ini, dan transaksi terakhir",
+      altFkHomeShort: "Beranda aplikasi FreeKasir",
+      altCtLibrary: "Ceritopia: selamat datang di perpustakaan Jimmy, setiap anak punya profilnya sendiri",
+      altCtBooks: "Rak buku Ceritopia dengan sampul buku cerita bergambar yang penuh warna",
+      altCtJimmy: "Jimmy, maskot Ceritopia, sedang membaca buku"
     }
   };
 
-  var EN = { meta: {}, text: {}, html: {}, aria: {} };
+  var EN = { meta: {}, text: {}, html: {}, aria: {}, alt: {} };
   var descTag = document.querySelector('meta[name="description"]');
   EN.meta.title = document.title;
   EN.meta.description = descTag ? descTag.getAttribute("content") : "";
@@ -54,9 +70,11 @@
   var textEls = document.querySelectorAll("[data-i18n]");
   var htmlEls = document.querySelectorAll("[data-i18n-html]");
   var ariaEls = document.querySelectorAll("[data-i18n-aria]");
+  var altEls = document.querySelectorAll("[data-i18n-alt]");
   textEls.forEach(function (el) { EN.text[el.dataset.i18n] = el.textContent; });
   htmlEls.forEach(function (el) { EN.html[el.dataset.i18nHtml] = el.innerHTML; });
   ariaEls.forEach(function (el) { EN.aria[el.dataset.i18nAria] = el.getAttribute("aria-label"); });
+  altEls.forEach(function (el) { EN.alt[el.dataset.i18nAlt] = el.getAttribute("alt"); });
 
   var DICTS = { en: EN, id: ID };
   var buttons = document.querySelectorAll(".lang-switch button");
@@ -77,6 +95,10 @@
     ariaEls.forEach(function (el) {
       var v = d.aria[el.dataset.i18nAria];
       if (v != null) el.setAttribute("aria-label", v);
+    });
+    altEls.forEach(function (el) {
+      var v = d.alt[el.dataset.i18nAlt];
+      if (v != null) el.setAttribute("alt", v);
     });
     buttons.forEach(function (b) {
       b.setAttribute("aria-pressed", String(b.dataset.lang === lang));

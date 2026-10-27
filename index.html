@@ -4,9 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>PT Jipraks Digital Indonesia · Apps, automation, AI, and training</title>
-  <meta name="description" content="PT Jipraks Digital Indonesia builds apps, automation, and AI solutions for businesses in Indonesia, and trains teams to run them.">
+  <meta name="description" content="PT Jipraks Digital Indonesia builds apps, automation, and AI solutions for businesses in Indonesia, and trains teams to run them. Makers of FreeKasir and Ceritopia.">
   <meta property="og:title" content="PT Jipraks Digital Indonesia">
-  <meta property="og:description" content="Apps, automation, AI, and training for businesses in Indonesia. Aplikasi, otomasi, AI, dan pelatihan untuk bisnis di Indonesia.">
+  <meta property="og:description" content="Apps, automation, AI, and training. Makers of FreeKasir and Ceritopia.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://jipraks.id/">
   <meta name="theme-color" content="#FAFAFA">
@@ -15,6 +15,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Calistoga&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <script src="i18n.js" defer></script>
+  <script src="motion.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
@@ -25,7 +26,7 @@
       <nav class="site-nav" aria-label="Main navigation" data-i18n-aria="navLabel">
         <ul class="nav-list">
           <li><a href="#services" data-i18n="navServices">Services</a></li>
-          <li><a href="#product" data-i18n="navProduct">Product</a></li>
+          <li><a href="#products" data-i18n="navProducts">Products</a></li>
           <li><a href="#contact" data-i18n="navContact">Contact</a></li>
         </ul>
       </nav>
@@ -40,75 +41,135 @@
     <section class="hero" aria-labelledby="hero-title">
       <div class="container hero-grid">
         <div class="hero-copy">
-          <h1 id="hero-title" data-i18n-html="heroTitle">We build apps, automation, and <span class="gradient-text">AI</span>.</h1>
-          <p class="lede" data-i18n="heroLede">PT Jipraks Digital Indonesia builds software for businesses in Indonesia, and trains teams to run it themselves.</p>
-          <div class="actions">
+          <h1 id="hero-title" class="reveal" data-i18n-html="heroTitle">We build apps, automation, and <span class="gradient-text">AI</span>.</h1>
+          <p class="lede reveal" style="--d: 1" data-i18n="heroLede">PT Jipraks Digital Indonesia builds software for businesses and families in Indonesia, and trains teams to run it themselves.</p>
+          <div class="actions reveal" style="--d: 2">
             <a class="btn btn-primary" href="#contact" data-i18n="ctaProject">Discuss your project</a>
-            <a class="btn btn-outline" href="#product" data-i18n="ctaProduct">See our product</a>
+            <a class="btn btn-outline" href="#products" data-i18n="ctaProducts">See our products</a>
+          </div>
+          <div class="product-strip reveal" style="--d: 3">
+            <span class="product-strip-label" data-i18n="stripLabel">Our products</span>
+            <a class="product-chip" href="#freekasir"><img src="assets/freekasir/icon.png" alt="" width="28" height="28">FreeKasir</a>
+            <a class="product-chip" href="#ceritopia"><img src="assets/ceritopia/icon.webp" alt="" width="28" height="28">Ceritopia</a>
           </div>
         </div>
 
-        <section id="services" class="services" aria-labelledby="services-title">
-          <h2 id="services-title" class="services-title" data-i18n="servicesTitle">What we do</h2>
-          <dl class="service-list">
-            <div>
-              <dt data-i18n="s1Title">App development</dt>
-              <dd data-i18n="s1Body">Mobile and web apps, from design through release and maintenance.</dd>
-            </div>
-            <div>
-              <dt data-i18n="s2Title">Automation</dt>
-              <dd data-i18n="s2Body">Repetitive data entry, reports, and notifications run on their own, inside the systems you already use.</dd>
-            </div>
-            <div>
-              <dt>AI</dt>
-              <dd data-i18n="s3Body">AI built into real workflows, such as reading documents or answering customer questions.</dd>
-            </div>
-            <div>
-              <dt data-i18n="s4Title">Training</dt>
-              <dd data-i18n="s4Body">Training so your team can use and maintain apps, automation, and AI on their own.</dd>
-            </div>
-          </dl>
-        </section>
-      </div>
-    </section>
-
-    <section id="product" class="product" aria-labelledby="product-title">
-      <div class="container product-grid">
-        <div class="product-intro">
-          <p class="kicker" data-i18n="productKicker">Our product</p>
-          <h2 id="product-title">FreeKasir</h2>
-          <p data-i18n="productBody">Our first product, and for now our only one: a free Android point-of-sale app for food stalls, grocery shops, coffee shops, and clothing stores.</p>
-          <p data-i18n="productBody2">It records sales, stock, and finances, and keeps working without internet.</p>
-          <a class="btn btn-primary" href="https://freekasir.com" target="_blank" rel="noopener" data-i18n="productCta">Visit FreeKasir.com</a>
-        </div>
-
-        <figure class="receipt" aria-labelledby="receipt-caption">
-          <div class="receipt-head">
-            <span class="receipt-brand">FreeKasir</span>
-            <span class="receipt-sub" data-i18n="rSub">Core cashier features</span>
+        <figure class="hero-stage reveal" style="--d: 1" aria-label="FreeKasir and Ceritopia app screens" data-i18n-aria="stageLabel">
+          <div class="device device--hero">
+            <img src="assets/freekasir/home.webp" alt="FreeKasir home screen with today's orders, sales, and recent transactions" data-i18n-alt="altFkHome" width="640" height="1296">
           </div>
-          <hr class="perforation">
-          <ul class="receipt-lines">
-            <li><span data-i18n="r1">Sales &amp; discounts</span><span>Rp 0</span></li>
-            <li><span data-i18n="r2">Automatic stock</span><span>Rp 0</span></li>
-            <li><span data-i18n="r3">Profit &amp; loss report</span><span>Rp 0</span></li>
-            <li><span data-i18n="r4">WhatsApp receipts</span><span>Rp 0</span></li>
-            <li><span data-i18n="r5">Offline mode</span><span>Rp 0</span></li>
-          </ul>
-          <hr class="perforation">
-          <p class="receipt-total"><span>Total</span><span class="gradient-text">Rp 0</span></p>
-          <figcaption id="receipt-caption" class="receipt-note" data-i18n="rNote">Free forever on one device. No ads, no transaction limits.</figcaption>
+          <img class="poster poster--hero" src="assets/ceritopia/1-perpustakaan-jimmy.webp" alt="Ceritopia: welcome to Jimmy's library, each child has their own profile" data-i18n-alt="altCtLibrary" width="540" height="960">
         </figure>
       </div>
     </section>
 
+    <section id="services" class="services" aria-labelledby="services-title">
+      <div class="container services-grid">
+        <div class="services-head reveal">
+          <h2 id="services-title" data-i18n="servicesTitle">What we do</h2>
+          <p data-i18n="servicesIntro">We design and build the software, then teach your team to run it.</p>
+        </div>
+        <ol class="service-list">
+          <li class="reveal">
+            <h3 data-i18n="s1Title">App development</h3>
+            <p data-i18n="s1Body">Mobile and web apps, from design through release and maintenance.</p>
+          </li>
+          <li class="reveal" style="--d: 1">
+            <h3 data-i18n="s2Title">Automation</h3>
+            <p data-i18n="s2Body">Repetitive data entry, reports, and notifications run on their own, inside the systems you already use.</p>
+          </li>
+          <li class="reveal" style="--d: 2">
+            <h3>AI</h3>
+            <p data-i18n="s3Body">AI built into real workflows, such as reading documents or answering customer questions.</p>
+          </li>
+          <li class="reveal" style="--d: 3">
+            <h3 data-i18n="s4Title">Training</h3>
+            <p data-i18n="s4Body">Training so your team can use and maintain apps, automation, and AI on their own.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="products" class="products" aria-labelledby="products-title">
+      <div class="container">
+        <div class="products-head reveal">
+          <p class="kicker" data-i18n="productsKicker">Our products</p>
+          <h2 id="products-title" data-i18n="productsTitle">Apps we build and run ourselves.</h2>
+        </div>
+
+        <article id="freekasir" class="product product--freekasir" aria-labelledby="fk-title">
+          <div class="product-copy reveal">
+            <div class="product-id">
+              <img src="assets/freekasir/icon.png" alt="" width="56" height="56">
+              <div>
+                <h3 id="fk-title">FreeKasir</h3>
+                <p class="product-tag" data-i18n="fkTag">Cashier app for small shops</p>
+              </div>
+            </div>
+            <p data-i18n="fkBody">A free Android point-of-sale app for food stalls, grocery shops, coffee shops, and clothing stores. It records sales, stock, and finances, and keeps working without internet.</p>
+            <ul class="product-facts">
+              <li data-i18n="fk1">Core cashier features free forever on one device</li>
+              <li data-i18n="fk2">Cash, bank transfer, e-wallet, and QRIS</li>
+              <li data-i18n="fk3">Receipts via WhatsApp or a Bluetooth printer</li>
+            </ul>
+            <div class="product-actions">
+              <a class="btn btn-product" href="https://freekasir.com" target="_blank" rel="noopener" data-i18n="fkCta">Visit FreeKasir.com</a>
+              <a class="link-arrow" href="https://play.google.com/store/apps/details?id=com.freekasir.app" target="_blank" rel="noopener" data-i18n="fkPlay">Get it on Google Play</a>
+            </div>
+          </div>
+          <div class="product-visual reveal" style="--d: 1">
+            <div class="device device--back">
+              <img src="assets/freekasir/features.webp" alt="" width="640" height="1296" loading="lazy">
+            </div>
+            <div class="device device--front">
+              <img src="assets/freekasir/home.webp" alt="FreeKasir home screen" data-i18n-alt="altFkHomeShort" width="640" height="1296" loading="lazy">
+            </div>
+          </div>
+        </article>
+
+        <article id="ceritopia" class="product product--ceritopia" aria-labelledby="ct-title">
+          <div class="product-copy reveal">
+            <div class="product-id">
+              <img src="assets/ceritopia/icon.webp" alt="" width="56" height="56">
+              <div>
+                <h3 id="ct-title">Ceritopia</h3>
+                <p class="product-tag" data-i18n="ctTag">Picture books, read aloud for children</p>
+              </div>
+            </div>
+            <p class="status" data-i18n="ctStatus">Coming soon to Google Play</p>
+            <p data-i18n="ctBody">Illustrated stories for ages 3 to 8, told by a narrator with soft music and sound effects. Children turn the pages themselves in Jimmy's little library.</p>
+            <ul class="product-facts">
+              <li data-i18n="ct1">Each child profile reads in Indonesian or English</li>
+              <li data-i18n="ct2">Shelves for fables, adventure, good habits, knowledge, and Nusantara stories</li>
+              <li data-i18n="ct3">Free, with no ads, no in-app purchases, and no chat</li>
+            </ul>
+            <div class="product-actions">
+              <a class="btn btn-product" href="https://ceritopia.com" target="_blank" rel="noopener" data-i18n="ctCta">Visit Ceritopia.com</a>
+            </div>
+          </div>
+          <div class="product-visual reveal" style="--d: 1">
+            <img class="poster poster--books" src="assets/ceritopia/3-buku-bergambar.webp" alt="Ceritopia book shelf with colorful picture book covers" data-i18n-alt="altCtBooks" width="540" height="960" loading="lazy">
+            <img class="mascot" src="assets/ceritopia/jimmy.webp" alt="Jimmy, the Ceritopia mascot, reading a book" data-i18n-alt="altCtJimmy" width="600" height="632" loading="lazy">
+          </div>
+        </article>
+      </div>
+    </section>
+
     <section id="contact" class="contact" aria-labelledby="contact-title">
-      <div class="container contact-grid">
-        <h2 id="contact-title" data-i18n="contactTitle">Have a project, or want training for your team?</h2>
-        <div class="contact-details">
-          <p class="contact-row"><span class="contact-label">Email</span><a class="contact-value" href="mailto:hello@jipraks.id">hello@jipraks.id</a></p>
-          <p class="contact-row"><span class="contact-label" data-i18n="contactAddress">Address</span><span class="contact-value">Citra Maja City 2, Kabupaten Lebak, Banten</span></p>
-          <p class="contact-help" data-i18n="contactHelp">FreeKasir users can reach customer support via WhatsApp from inside the app.</p>
+      <div class="container">
+        <div class="contact-panel reveal">
+          <h2 id="contact-title" data-i18n="contactTitle">Have a project, or want training for your team?</h2>
+          <a class="contact-email" href="mailto:hello@jipraks.id">hello@jipraks.id</a>
+          <dl class="contact-meta">
+            <div>
+              <dt data-i18n="contactAddress">Address</dt>
+              <dd>Citra Maja City 2, Kabupaten Lebak, Banten</dd>
+            </div>
+            <div>
+              <dt data-i18n="contactSupport">App support</dt>
+              <dd data-i18n="contactHelp">Ceritopia users can write to help@jipraks.id. FreeKasir users can reach support via WhatsApp from inside the app.</dd>
+            </div>
+          </dl>
         </div>
       </div>
     </section>
