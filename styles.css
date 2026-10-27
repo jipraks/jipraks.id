@@ -136,13 +136,23 @@ a {
 
 .wordmark {
   grid-area: brand;
-  font-family: var(--font-display);
-  font-size: clamp(1.0625rem, 0.95rem + 0.5vw, 1.375rem);
-  line-height: 1.2;
-  text-decoration: none;
   display: inline-flex;
   align-items: center;
+  justify-self: start;
   min-height: 44px;
+  border-radius: 6px;
+}
+
+/* The lockup's subtitle line is about 1/6 of its height; 2.75rem+ keeps "DIGITAL INDONESIA" legible. */
+.wordmark img {
+  height: clamp(2.75rem, 2.4rem + 1.2vw, 3.5rem);
+  width: auto;
+}
+
+.header-inner--solo {
+  grid-template-columns: 1fr;
+  grid-template-areas: "brand";
+  padding-top: 1rem;
 }
 
 .site-nav {
@@ -690,10 +700,14 @@ a {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
-  gap: 0.5rem 1.5rem;
+  gap: 0.5rem 0.75rem;
   font-size: 0.9375rem;
   color: var(--muted-foreground);
+}
+
+.footer-mark {
+  width: 32px;
+  height: 32px;
 }
 
 /* Scroll reveal: content stays visible unless motion.js runs; it adds .motion to <html>, then .is-visible per element. */
