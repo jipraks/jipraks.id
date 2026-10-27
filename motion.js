@@ -1,5 +1,25 @@
 // Fades sections up as they scroll into view, once each.
 // Content is only hidden after this script adds .motion, so a failed load never hides anything.
+// Sticky header: publish its height for anchor offsets, and show its border once the page scrolls.
+// This part runs regardless of motion preferences.
+(function () {
+  var header = document.querySelector(".site-header");
+  if (!header) return;
+  var root = document.documentElement;
+
+  function measure() {
+    root.style.setProperty("--header-h", header.offsetHeight + "px");
+  }
+  function onScroll() {
+    header.classList.toggle("is-scrolled", window.scrollY > 4);
+  }
+
+  measure();
+  onScroll();
+  window.addEventListener("resize", measure);
+  window.addEventListener("scroll", onScroll, { passive: true });
+})();
+
 (function () {
   var items = document.querySelectorAll(".reveal");
   var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;

@@ -45,6 +45,8 @@
 html {
   scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
+  /* Anchor jumps land below the sticky header; motion.js sets the exact height. */
+  scroll-padding-top: calc(var(--header-h, 6.5rem) + 1rem);
 }
 
 body {
@@ -101,7 +103,7 @@ a {
   position: absolute;
   left: 1rem;
   top: -4rem;
-  z-index: 10;
+  z-index: 30;
   padding: 0.75rem 1rem;
   background: var(--foreground);
   color: var(--on-dark);
@@ -122,6 +124,21 @@ a {
 }
 
 /* Header: brand + language on row one, nav on row two for phones; one row from tablet up. */
+/* Sticky header with an opaque background: a translucent one drops nav text below AA over the dark products band. */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: var(--background);
+  border-bottom: 1px solid transparent;
+  transition: border-color 200ms ease-out, box-shadow 200ms ease-out;
+}
+
+.site-header.is-scrolled {
+  border-bottom-color: var(--border);
+  box-shadow: 0 6px 16px -12px rgba(15, 23, 42, 0.25);
+}
+
 .header-inner {
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
@@ -786,7 +803,7 @@ a {
 
   .services-head {
     position: sticky;
-    top: 2rem;
+    top: calc(var(--header-h, 4.5rem) + 2rem);
   }
 
   .service-list li {
