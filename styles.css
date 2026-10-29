@@ -20,6 +20,9 @@
   --fk-ink: #0052FF;
   --ct-tint: #FFF1E2;
   --ct-ink: #9A3B22;
+  /* Akunpas shares the blue family with FreeKasir, so its tile is a cool slate to tell them apart. #0052FF on it: 5.07:1. */
+  --ap-tint: #EDF1F6;
+  --ap-ink: #0052FF;
 
   --font-display: "Calistoga", Georgia, serif;
   --font-body: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
@@ -498,6 +501,21 @@ a {
   --ink: var(--ct-ink);
 }
 
+.product--akunpas {
+  background: var(--ap-tint);
+  --ink: var(--ap-ink);
+}
+
+.product-copy .product-note {
+  font-size: 0.9375rem;
+}
+
+.product-note a {
+  color: var(--ink);
+  font-weight: 600;
+  text-underline-offset: 0.2em;
+}
+
 .product :focus-visible {
   outline-color: var(--ink);
 }
@@ -606,7 +624,8 @@ a {
   min-height: 20rem;
 }
 
-.product--freekasir .device--back {
+.product--freekasir .device--back,
+.product--akunpas .device--back {
   width: 42%;
   max-width: 13rem;
   left: 12%;
@@ -614,7 +633,8 @@ a {
   transform: rotate(-6deg);
 }
 
-.product--freekasir .device--front {
+.product--freekasir .device--front,
+.product--akunpas .device--front {
   width: 46%;
   max-width: 14rem;
   right: 10%;
