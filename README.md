@@ -8,7 +8,7 @@ Landing page PT Jipraks Digital Indonesia. HTML dan CSS statis, tanpa build step
 - `styles.css`: semua style dan design token
 - `i18n.js`: tombol bahasa EN / ID. Teks Inggris (bawaan) ada di HTML, teks Indonesia di file ini. Bahasa dipilih dari `?lang=`, lalu pilihan pengunjung sebelumnya, lalu bahasa utama browser (Indonesia -> ID, selain itu EN)
 - `motion.js`: animasi muncul saat scroll. Konten tetap tampil kalau script gagal dimuat atau pengunjung memilih reduced motion
-- `assets/`: ikon dan screenshot asli FreeKasir, Ceritopia, dan Akunpas. FreeKasir dan Ceritopia disalin dari situsnya; aset Akunpas dari repo custom-erp (`docs/brand`), screenshot-nya diambil dari aplikasi dengan data contoh
+- `assets/`: ikon dan screenshot asli FreeKasir, Ceritopia, dan Bang Kurir. FreeKasir dan Ceritopia disalin dari situsnya; aset Bang Kurir (ikon, render kurir, screenshot gameplay) dari repo bang-kurir-core dan render store
 - `404.html`: halaman tidak ditemukan
 - `CNAME`: domain kustom `jipraks.id`
 - `links.json` + `scripts/build-links.mjs`: shortlink seperti `jipraks.id/repliz`

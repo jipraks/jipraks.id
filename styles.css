@@ -20,9 +20,9 @@
   --fk-ink: #0052FF;
   --ct-tint: #FFF1E2;
   --ct-ink: #9A3B22;
-  /* Akunpas shares the blue family with FreeKasir, so its tile is a cool slate to tell them apart. #0052FF on it: 5.07:1. */
-  --ap-tint: #EDF1F6;
-  --ap-ink: #0052FF;
+  /* Bang Kurir: the game's navy on a pale tint of its button yellow; its orange stays in the art. #0D2452 on it: 14.6:1. */
+  --bk-tint: #FFF5D1;
+  --bk-ink: #0D2452;
 
   --font-display: "Calistoga", Georgia, serif;
   --font-body: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
@@ -501,19 +501,9 @@ a {
   --ink: var(--ct-ink);
 }
 
-.product--akunpas {
-  background: var(--ap-tint);
-  --ink: var(--ap-ink);
-}
-
-.product-copy .product-note {
-  font-size: 0.9375rem;
-}
-
-.product-note a {
-  color: var(--ink);
-  font-weight: 600;
-  text-underline-offset: 0.2em;
+.product--bangkurir {
+  background: var(--bk-tint);
+  --ink: var(--bk-ink);
 }
 
 .product :focus-visible {
@@ -624,8 +614,7 @@ a {
   min-height: 20rem;
 }
 
-.product--freekasir .device--back,
-.product--akunpas .device--back {
+.product--freekasir .device--back {
   width: 42%;
   max-width: 13rem;
   left: 12%;
@@ -633,8 +622,7 @@ a {
   transform: rotate(-6deg);
 }
 
-.product--freekasir .device--front,
-.product--akunpas .device--front {
+.product--freekasir .device--front {
   width: 46%;
   max-width: 14rem;
   right: 10%;
@@ -648,6 +636,41 @@ a {
   left: 8%;
   top: 0;
   transform: rotate(-3deg);
+}
+
+/* Bang Kurir is landscape-only, so its screens sit in wide frames with the courier riding in front. */
+.device--wide {
+  padding: 5px;
+  border-radius: 20px;
+}
+
+.device--wide img {
+  border-radius: 15px;
+}
+
+.product--bangkurir .device--back {
+  width: 70%;
+  max-width: 24rem;
+  left: 0;
+  top: 0;
+  transform: rotate(-4deg);
+}
+
+.product--bangkurir .device--front {
+  width: 78%;
+  max-width: 27rem;
+  right: 0;
+  top: 24%;
+  transform: rotate(2deg);
+}
+
+.mascot--courier {
+  width: 40%;
+  max-width: 13rem;
+  left: 2%;
+  right: auto;
+  bottom: 0;
+  filter: drop-shadow(0 16px 20px rgba(13, 36, 82, 0.28));
 }
 
 .mascot {
@@ -965,6 +988,10 @@ a {
 
   .product:hover .device--front {
     transform: rotate(3deg);
+  }
+
+  .product--bangkurir:hover .device--front {
+    transform: rotate(2deg);
   }
 
   .product:hover .poster--books {

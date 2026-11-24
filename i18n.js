@@ -5,7 +5,7 @@
   var ID = {
     meta: {
       title: "PT Jipraks Digital Indonesia · Aplikasi, otomasi, AI, dan pelatihan",
-      description: "PT Jipraks Digital Indonesia mengembangkan aplikasi, otomasi, dan solusi AI untuk bisnis di Indonesia, serta melatih tim untuk memakainya. Pembuat FreeKasir, Ceritopia, dan Akunpas."
+      description: "PT Jipraks Digital Indonesia mengembangkan aplikasi, otomasi, dan solusi AI untuk bisnis di Indonesia, serta melatih tim untuk memakainya. Pembuat FreeKasir, Ceritopia, dan Bang Kurir."
     },
     text: {
       skip: "Langsung ke konten",
@@ -41,19 +41,16 @@
       ct2: "Rak untuk fabel, petualangan, kebiasaan baik, pengetahuan, dan cerita Nusantara",
       ct3: "Gratis, tanpa iklan, tanpa pembelian dalam aplikasi, dan tanpa chat",
       ctCta: "Kunjungi Ceritopia.com",
-      apTag: "Pembukuan berpasangan untuk UMKM",
-      apBody: "Aplikasi akuntansi berbasis web untuk UMKM di Indonesia. Setiap transaksi dicatat berpasangan, debit dan kredit selalu seimbang, sehingga neraca, laba rugi, dan arus kas tersusun langsung dari catatan Anda.",
-      ap1: "Bagan akun standar SAK EMKM, siap saat perusahaan dibuat",
-      ap2: "Faktur penjualan dan pembelian dengan PPN 11% atau 12% yang dihitung otomatis",
-      ap3: "Banyak perusahaan dalam satu akun, dengan anggota tim sesuai peran",
-      apPlans: "Ada masa uji coba gratis, lalu langganan bulanan per perusahaan.",
-      apPlansLink: "Lihat paket",
-      apCta: "Kunjungi Akunpas.com",
-      apTry: "Coba gratis",
+      bkTag: "Dari kurir motor matic jadi juragan ekspedisi",
+      bkBody: "Game simulasi kurir di kota Indonesia yang hidup. Ambil paket di depo, ikuti GPS ke tiap rumah, tembus lalu lintas, hujan, sampai malam, dan gajian tiap pagi. Naik kelas dari motor matic sampai blind van, lalu bangun perusahaan ekspedisi sendiri lengkap dengan depo dan kurir rekrutan.",
+      bk1: "Gratis di Google Play, ada iklan dan langganan VIP opsional",
+      bk2: "Main sendiri dan bisa offline, masuk Google untuk simpan progres di cloud",
+      bk3: "Empat kendaraan, perusahaan sendiri sampai empat depo, siang, malam, dan hujan",
+      bkPlay: "Dapatkan di Google Play",
       contactTitle: "Punya proyek, atau ingin pelatihan untuk tim Anda?",
       contactAddress: "Alamat",
       contactSupport: "Dukungan aplikasi",
-      contactHelp: "Pengguna Ceritopia bisa menulis ke help@jipraks.id, dan pengguna Akunpas ke support@akunpas.com. Pengguna FreeKasir bisa menghubungi layanan pelanggan lewat WhatsApp dari dalam aplikasi."
+      contactHelp: "Pengguna Ceritopia dan pemain Bang Kurir bisa menulis ke help@jipraks.id. Pengguna FreeKasir bisa menghubungi layanan pelanggan lewat WhatsApp dari dalam aplikasi."
     },
     html: {
       heroTitle: 'Kami membangun aplikasi, otomasi, dan <span class="gradient-text">AI</span>.'
@@ -68,8 +65,8 @@
       altCtLibrary: "Ceritopia: selamat datang di perpustakaan Jimmy, setiap anak punya profilnya sendiri",
       altCtBooks: "Rak buku Ceritopia dengan sampul buku cerita bergambar yang penuh warna",
       altCtJimmy: "Jimmy, maskot Ceritopia, sedang membaca buku",
-      altApBalance: "Neraca Akunpas bertanda seimbang: aset sama dengan liabilitas ditambah ekuitas",
-      altApDashboard: "Dasbor Akunpas dengan kas dan bank, piutang usaha, utang usaha, dan laba bersih tahun ini"
+      altBkRide: "Gameplay Bang Kurir: mengendarai motor kurir di jalan kota dengan petunjuk GPS, peta mini, dan speedometer",
+      altBkCourier: "Kurir Bang Kurir di atas motor biru dengan boks pengiriman oranye"
     }
   };
 
