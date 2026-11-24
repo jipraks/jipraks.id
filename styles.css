@@ -352,13 +352,13 @@ a {
   border-color: rgba(0, 82, 255, 0.3);
 }
 
-/* Hero stage: real screens of both products on a leaf-shaped tile. */
+/* Hero stage: real screens of the products, with the Bang Kurir courier riding in front, on a leaf-shaped tile. */
 .hero-stage {
   position: relative;
   margin: 0;
   min-height: 22rem;
   border-radius: var(--leaf);
-  background: linear-gradient(135deg, var(--fk-tint) 0%, var(--fk-tint) 45%, var(--ct-tint) 100%);
+  background: linear-gradient(135deg, var(--fk-tint) 0%, var(--fk-tint) 35%, var(--ct-tint) 70%, var(--bk-tint) 100%);
   overflow: hidden;
 }
 
@@ -394,6 +394,15 @@ a {
   right: 8%;
   top: 18%;
   transform: rotate(4deg);
+}
+
+.hero-stage .mascot--hero {
+  width: 42%;
+  max-width: 15.5rem;
+  left: 0;
+  right: auto;
+  bottom: 2%;
+  filter: drop-shadow(0 16px 20px rgba(13, 36, 82, 0.3));
 }
 
 /* Services: an editorial list beside a sticky heading, not four identical cards. */
@@ -664,7 +673,7 @@ a {
   transform: rotate(2deg);
 }
 
-.mascot--courier {
+.product-visual .mascot--courier {
   width: 40%;
   max-width: 13rem;
   left: 2%;

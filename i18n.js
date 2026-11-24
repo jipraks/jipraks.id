@@ -4,15 +4,15 @@
 (function () {
   var ID = {
     meta: {
-      title: "PT Jipraks Digital Indonesia · Aplikasi, otomasi, AI, dan pelatihan",
-      description: "PT Jipraks Digital Indonesia mengembangkan aplikasi, otomasi, dan solusi AI untuk bisnis di Indonesia, serta melatih tim untuk memakainya. Pembuat FreeKasir, Ceritopia, dan Bang Kurir."
+      title: "PT Jipraks Digital Indonesia · Aplikasi, game, otomasi, AI, dan pelatihan",
+      description: "PT Jipraks Digital Indonesia mengembangkan aplikasi, otomasi, dan AI untuk bisnis di Indonesia, melatih tim untuk memakainya, dan membuat game mobile di studio sendiri. Pembuat FreeKasir, Ceritopia, dan Bang Kurir."
     },
     text: {
       skip: "Langsung ke konten",
       navServices: "Layanan",
       navProducts: "Produk",
       navContact: "Kontak",
-      heroLede: "PT Jipraks Digital Indonesia mengembangkan perangkat lunak untuk bisnis dan keluarga di Indonesia, dan melatih tim agar bisa memakainya sendiri.",
+      heroLede: "PT Jipraks Digital Indonesia mengembangkan perangkat lunak untuk bisnis dan keluarga di Indonesia, membuat game mobile di studio sendiri, dan melatih tim agar bisa memakai perangkat lunaknya sendiri.",
       ctaProject: "Diskusikan proyek Anda",
       ctaProducts: "Lihat produk kami",
       stripLabel: "Produk kami",
@@ -25,8 +25,10 @@
       s3Body: "AI dipasang ke proses kerja nyata, misalnya membaca dokumen atau membalas pertanyaan pelanggan.",
       s4Title: "Pelatihan",
       s4Body: "Pelatihan agar tim Anda bisa memakai dan merawat aplikasi, otomasi, dan AI sendiri.",
+      s5Title: "Game",
+      s5Body: "Studio kami sendiri membuat game mobile yang dekat dengan keseharian di Indonesia, dari aset 3D dan gameplay sampai rilis dan pembaruan rutin.",
       productsKicker: "Produk kami",
-      productsTitle: "Aplikasi yang kami bangun dan jalankan sendiri.",
+      productsTitle: "Aplikasi dan game yang kami bangun dan jalankan sendiri.",
       fkTag: "Aplikasi kasir untuk toko kecil",
       fkBody: "Aplikasi kasir Android gratis untuk warung, toko kelontong, kedai kopi, dan toko pakaian. Mencatat penjualan, stok, dan keuangan, dan tetap jalan tanpa internet.",
       fk1: "Fitur kasir inti gratis selamanya di satu perangkat",
@@ -53,11 +55,11 @@
       contactHelp: "Pengguna Ceritopia dan pemain Bang Kurir bisa menulis ke help@jipraks.id. Pengguna FreeKasir bisa menghubungi layanan pelanggan lewat WhatsApp dari dalam aplikasi."
     },
     html: {
-      heroTitle: 'Kami membangun aplikasi, otomasi, dan <span class="gradient-text">AI</span>.'
+      heroTitle: 'Kami membangun aplikasi, game, otomasi, dan <span class="gradient-text">AI</span>.'
     },
     aria: {
       navLabel: "Navigasi utama",
-      stageLabel: "Tampilan aplikasi FreeKasir dan Ceritopia"
+      stageLabel: "Tampilan FreeKasir, Ceritopia, dan Bang Kurir"
     },
     alt: {
       altFkHome: "Beranda FreeKasir dengan total pesanan, penjualan hari ini, dan transaksi terakhir",
