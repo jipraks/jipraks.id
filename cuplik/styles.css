@@ -865,3 +865,103 @@ a:hover {
     transition-duration: 0.01ms !important;
   }
 }
+
+/* Coming soon dialog for the download buttons. */
+.soon-dialog {
+  width: min(26rem, calc(100% - 2rem));
+  padding: 1.75rem;
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  background: var(--card);
+  color: var(--text);
+  box-shadow: var(--shadow-lg);
+}
+
+.soon-dialog::backdrop {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.soon-dialog h2 {
+  font-size: 1.5rem;
+}
+
+.soon-dialog p {
+  margin-top: 0.75rem;
+  color: var(--text-2);
+}
+
+.soon-dialog form {
+  margin-top: 1.5rem;
+}
+
+.soon-dialog .btn {
+  width: 100%;
+}
+
+button.btn {
+  border: 0;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+button.btn-outline {
+  border: 1px solid var(--border);
+}
+
+/* GitHub badge in the footer: label and live star count, like a repo button. */
+.gh-badge {
+  display: inline-flex;
+  align-items: stretch;
+  min-height: 44px;
+  border: 1px solid var(--border);
+  border-radius: var(--r);
+  overflow: hidden;
+  color: var(--text);
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-decoration: none;
+  justify-self: start;
+}
+
+.gh-badge:hover {
+  color: var(--text);
+  border-color: #3A3E46;
+}
+
+.gh-badge-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0 0.875rem;
+  background: var(--card);
+  transition: background-color 150ms ease;
+}
+
+.gh-badge:hover .gh-badge-label {
+  background: var(--hover);
+}
+
+.gh-badge-count {
+  display: inline-flex;
+  align-items: center;
+  padding: 0 0.875rem;
+  border-left: 1px solid var(--border);
+  background: var(--panel);
+  font-variant-numeric: tabular-nums;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+@media (min-width: 640px) {
+  .gh-badge {
+    grid-column: 2;
+    justify-self: end;
+  }
+}
