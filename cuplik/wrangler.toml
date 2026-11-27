@@ -1,0 +1,4 @@
+# Cloudflare Pages project for cuplik.jipraks.id. Static files, no build step.
+name = "cuplik"
+pages_build_output_dir = "."
+compatibility_date = "2026-11-01"

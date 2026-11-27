@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kebijakan Privasi Cuplik · PT Jipraks Digital Indonesia</title>
+  <meta name="description" content="Kebijakan Privasi aplikasi Cuplik: data apa yang dipakai, dikirim ke mana, berapa lama disimpan, dan cara menghapusnya.">
+  <link rel="canonical" href="https://cuplik.jipraks.id/privacy-policy">
+  <meta name="theme-color" content="#1A1A1A">
+  <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/assets/icon-192.png" sizes="192x192" type="image/png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preload" href="/fonts/plus-jakarta-sans-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/styles.css?v=1">
+</head>
+<body>
+  <a class="skip-link" href="#main">Langsung ke konten</a>
+
+  <header class="topbar">
+    <nav class="pill-nav" aria-label="Navigasi utama">
+      <a class="wordmark" href="/" aria-label="Cuplik"><span class="cup">Cup</span><span class="lik">lik</span></a>
+      <ul class="nav-links">
+        <li><a href="/terms-condition">Syarat dan Ketentuan</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main" class="legal">
+    <div class="wrap">
+      <p class="legal-app">Cuplik</p>
+      <h1>Kebijakan Privasi</h1>
+      <p class="legal-meta">Berlaku sejak 27 November 2026</p>
+
+      <p>Cuplik adalah aplikasi Windows untuk mengubah video panjang jadi klip pendek vertikal dengan AI, disediakan oleh PT Jipraks Digital Indonesia ("kami"). Halaman ini menjelaskan data apa yang dipakai Cuplik, dikirim ke mana, untuk apa, berapa lama disimpan, dan apa yang bisa kamu lakukan.</p>
+
+      <div class="summary-box">
+        <p>Ringkasnya</p>
+        <ul>
+          <li>Kamu tidak perlu membuat akun, email, atau kata sandi untuk memakai Cuplik.</li>
+          <li>Proyek, video sumber, dan klip hasil render disimpan di komputermu.</li>
+          <li>Untuk mencari highlight, transkrip video dikirim ke layanan AI: AI bawaan kami atau layanan AI pilihanmu. Video dan suaranya tidak dikirim ke AI.</li>
+          <li>Klip hanya diunggah ke server kami kalau kamu menjadwalkan posting lewat Repliz.</li>
+          <li>Kami tidak menjual data kamu.</li>
+        </ul>
+      </div>
+
+      <h2>Data yang tersimpan di komputermu</h2>
+      <p>Cuplik menyimpan data berikut di folder data aplikasi di komputermu (di Windows biasanya <code>%APPDATA%\com.jipraks.ytshortclipper-v2</code>):</p>
+      <ul>
+        <li><strong>Pengaturan:</strong> bahasa, pilihan AI, tampilan klip, waktu kamu menyetujui ketentuan ini, dan ID instalasi acak yang dibuat saat Cuplik pertama kali dijalankan.</li>
+        <li><strong>Proyek:</strong> link dan judul video, transkrip, highlight, salinan video sumber beresolusi rendah, dan klip hasil render.</li>
+        <li><strong>Logo</strong> yang kamu pasang untuk klip.</li>
+        <li><strong>File cookies</strong> yang kamu impor supaya Cuplik bisa mengambil video. File ini berisi data login akun video kamu dan disimpan sebagai file biasa di folder data aplikasi.</li>
+      </ul>
+      <p>Kunci akun AI bawaan, API key AI milikmu, serta access key dan secret key Repliz disimpan di Windows Credential Manager. Kalau penyimpanan itu gagal, kunci disimpan di file pengaturan di folder data aplikasi.</p>
+      <p>Data ini tidak kami terima, kecuali bagian yang disebut di bawah. Data terhapus kalau kamu menghapus proyek di aplikasi, menghapus folder data aplikasi, atau meng-uninstall Cuplik.</p>
+
+      <h2>Data yang dikirim ke layanan AI</h2>
+      <p>Untuk mencari highlight dan menulis judul, Cuplik mengirim teks berikut ke layanan AI:</p>
+      <ul>
+        <li>Transkrip video beserta waktunya.</li>
+        <li>Judul video, nama channel, dan 500 karakter pertama deskripsi video.</li>
+        <li>Arahan atau prompt tambahan yang kamu tulis.</li>
+        <li>Untuk judul posting: judul klip, teks hook, dan konteksnya.</li>
+      </ul>
+      <p>Video dan audio tidak pernah dikirim ke AI. Transkrip diambil dari subtitle video.</p>
+      <p><strong>Kalau kamu memakai AI bawaan</strong>, teks ini dikirim ke server AI kami (<code>ai-api.ytclip.org</code>) yang meneruskannya ke penyedia model AI. Kami mencatat pemakaian per permintaan: model, jumlah token, biaya, waktu, dan pesan error jika ada.</p>
+      <p><strong>Kalau kamu memakai API key sendiri</strong>, teks ini dan API key kamu dikirim langsung ke alamat layanan AI yang kamu pilih, misalnya OpenAI, Google Gemini, Groq, atau server lokal. Pemakaian data di sana diatur oleh kebijakan privasi layanan tersebut. Kalau kamu memilih preset YTClip AI (Web), permintaan dikirim ke server AI kami.</p>
+
+      <h2>Akun AI bawaan dan saldo</h2>
+      <p>Saat Cuplik dijalankan, aplikasi mendaftarkan akun anonim untuk perangkatmu ke server kami (<code>api-v2.ytclip.org</code>). Akun ini tidak memakai nama, email, atau nomor HP. Yang kami simpan:</p>
+      <ul>
+        <li>ID akun, ID instalasi acak, platform (Windows), dan versi aplikasi.</li>
+        <li>Saldo, total top up, total pemakaian, dan tingkat member.</li>
+        <li>Riwayat top up: jumlah, biaya layanan, status, dan waktunya.</li>
+        <li>Catatan pemakaian AI seperti yang dijelaskan di atas.</li>
+      </ul>
+      <p>Top up dibayar dengan QRIS lewat aplikasi bank atau e-wallet kamu. Pembayaran diproses oleh penyedia pembayaran kami. Kami tidak menerima nomor rekening, nomor kartu, atau PIN kamu.</p>
+      <p>Akun ini hanya bisa dipakai dengan kunci akun di komputermu. Kalau kunci itu hilang, kami tidak bisa memulihkan akun atau saldonya.</p>
+
+      <h2>Posting lewat Repliz</h2>
+      <p>Kalau kamu menjadwalkan posting dari Cuplik:</p>
+      <ul>
+        <li>Klip yang dipilih diunggah ke penyimpanan cloud kami dengan nama file acak. File ini bisa dibuka oleh siapa pun yang punya tautannya, karena Repliz dan platform sosial perlu mengambilnya dari tautan itu.</li>
+        <li>Cuplik mengirim judul, deskripsi, tautan klip, akun tujuan, dan waktu posting ke Repliz memakai access key dan secret key Repliz milikmu.</li>
+      </ul>
+      <p>Repliz dan platform sosial tujuan mengatur data posting sesuai kebijakan privasi mereka sendiri.</p>
+
+      <h2>Mengambil video</h2>
+      <p>Untuk mengambil informasi video, subtitle, pratinjau, dan potongan video, Cuplik menghubungi YouTube langsung dari komputermu, dengan file cookies kamu jika ada. Cuplik juga mengambil thumbnail dan info video dari YouTube, dan dapat mengunduh komponen pendukung dari GitHub dan model deteksi wajah dari Google Cloud Storage. Permintaan ini dikirim langsung dari komputermu ke layanan tersebut, bukan lewat server kami.</p>
+
+      <h2>Statistik pemakaian</h2>
+      <p>Setiap kali satu klip selesai dirender, Cuplik dapat mengirim satu catatan ke Google Analytics berisi ID instalasi acak, durasi klip, mode framing, versi aplikasi, dan waktu sesi. Isi video, judul, dan transkrip tidak dikirim. Google juga menerima alamat IP kamu saat catatan ini dikirim. Kami memakainya untuk tahu seberapa sering Cuplik dipakai.</p>
+
+      <h2>Info aplikasi dan pembaruan</h2>
+      <p>Saat dibuka, Cuplik mengambil info versi terbaru, pengumuman, dan isi menu Bantuan dari server kami. Permintaan ini tidak membawa data pribadi, tapi seperti semua koneksi internet, server menerima alamat IP kamu.</p>
+
+      <h2>Untuk apa data dipakai</h2>
+      <ul>
+        <li>Menjalankan fitur Cuplik: mencari highlight, menulis judul, dan menjadwalkan posting.</li>
+        <li>Mengelola saldo AI, top up, dan pemakaian.</li>
+        <li>Mencegah penyalahgunaan, misalnya menonaktifkan akun yang dipakai untuk melanggar Syarat dan Ketentuan.</li>
+        <li>Memahami pemakaian aplikasi dan memperbaikinya.</li>
+      </ul>
+
+      <h2>Berbagi data</h2>
+      <p>Kami tidak menjual data kamu. Kami hanya membagikan data kepada pihak yang dibutuhkan untuk menjalankan fitur di atas: penyedia model AI, penyedia pembayaran QRIS, penyedia penyimpanan cloud, Repliz saat kamu menjadwalkan posting, dan Google Analytics. Kami juga dapat membuka data jika diwajibkan oleh hukum yang berlaku di Indonesia.</p>
+
+      <h2>Berapa lama data disimpan</h2>
+      <ul>
+        <li>Data di komputermu disimpan sampai kamu menghapusnya.</li>
+        <li>Akun AI bawaan, saldo, riwayat top up, dan catatan pemakaian disimpan selama akun ada, dan dapat disimpan lebih lama jika diwajibkan untuk keperluan pajak, akuntansi, atau hukum.</li>
+        <li>Klip yang diunggah untuk posting lewat Repliz tetap tersimpan di penyimpanan cloud kami sampai kamu meminta penghapusannya.</li>
+      </ul>
+
+      <h2>Hak kamu</h2>
+      <p>Sesuai Undang-Undang Pelindungan Data Pribadi, kamu dapat meminta informasi tentang data kamu yang kami simpan, meminta salinannya, meminta perbaikan, atau meminta penghapusannya. Kirim permintaan ke <a href="mailto:help@jipraks.id">help@jipraks.id</a> dan sertakan ID akun dari halaman AI di Cuplik, supaya kami bisa menemukan datanya. Kalau akun AI bawaan dihapus, saldonya ikut hilang dan tidak bisa dikembalikan.</p>
+
+      <h2>Keamanan</h2>
+      <p>Koneksi Cuplik ke server kami memakai HTTPS, dan kunci akun serta API key disimpan di Windows Credential Manager. Tidak ada sistem yang aman sepenuhnya, jadi jaga komputermu dan jangan bagikan kunci akun, API key, atau file cookies kamu kepada orang lain.</p>
+
+      <h2>Anak-anak</h2>
+      <p>Cuplik tidak ditujukan untuk anak di bawah 13 tahun, dan kami tidak sengaja mengumpulkan data anak. Pengguna di bawah 18 tahun sebaiknya memakai Cuplik dan melakukan top up dengan izin orang tua atau wali.</p>
+
+      <h2>Perubahan kebijakan</h2>
+      <p>Kami dapat mengubah kebijakan ini, misalnya saat Cuplik mendapat fitur baru. Tanggal berlaku di atas akan diperbarui. Untuk perubahan penting, kami akan memberi tahu lewat aplikasi atau halaman ini.</p>
+
+      <h2>Kontak</h2>
+      <p>PT Jipraks Digital Indonesia<br>Citra Maja City 2, Kabupaten Lebak, Banten<br>Email: <a href="mailto:help@jipraks.id">help@jipraks.id</a></p>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-grid">
+      <div>
+        <p class="wordmark" aria-label="Cuplik"><span class="cup">Cup</span><span class="lik">lik</span></p>
+        <p>&copy; 2026 PT Jipraks Digital Indonesia</p>
+      </div>
+      <ul>
+        <li><a href="/">Beranda</a></li>
+        <li><a href="/terms-condition">Syarat dan Ketentuan</a></li>
+      </ul>
+    </div>
+  </footer>
+</body>
+</html>
