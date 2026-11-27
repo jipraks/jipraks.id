@@ -5,7 +5,7 @@
   var ID = {
     meta: {
       title: "PT Jipraks Digital Indonesia · Aplikasi, game, otomasi, AI, dan pelatihan",
-      description: "PT Jipraks Digital Indonesia mengembangkan aplikasi, otomasi, dan AI untuk bisnis di Indonesia, melatih tim untuk memakainya, dan membuat game mobile di studio sendiri. Pembuat FreeKasir, Ceritopia, dan Bang Kurir."
+      description: "PT Jipraks Digital Indonesia mengembangkan aplikasi, otomasi, dan AI untuk bisnis di Indonesia, melatih tim untuk memakainya, dan membuat game mobile di studio sendiri. Pembuat FreeKasir, Ceritopia, Bang Kurir, dan Cuplik."
     },
     text: {
       skip: "Langsung ke konten",
@@ -49,10 +49,17 @@
       bk2: "Main sendiri dan bisa offline, masuk Google untuk simpan progres di cloud",
       bk3: "Empat kendaraan, perusahaan sendiri sampai empat depo, siang, malam, dan hujan",
       bkPlay: "Dapatkan di Google Play",
+      cpTag: "Video panjang jadi klip pendek, pakai AI",
+      cpBody: "Aplikasi Windows yang mengubah video YouTube panjang jadi klip vertikal 9:16. AI membaca seluruh transkrip untuk menemukan momen yang layak dipotong, kamu rapikan di timeline, lalu render dengan caption dan hook dan jadwalkan posting lewat Repliz.",
+      cp1: "Gratis di Microsoft Store, untuk Windows 10 dan 11",
+      cp2: "AI bawaan dengan top up QRIS, atau pakai API key sendiri",
+      cp3: "Framing yang mengikuti wajah, caption kata per kata, dan judul dari AI",
+      cpCta: "Kunjungi cuplik.jipraks.id",
+      cpStore: "Dapatkan di Microsoft Store",
       contactTitle: "Punya proyek, atau ingin pelatihan untuk tim Anda?",
       contactAddress: "Alamat",
       contactSupport: "Dukungan aplikasi",
-      contactHelp: "Pengguna Ceritopia dan pemain Bang Kurir bisa menulis ke help@jipraks.id. Pengguna FreeKasir bisa menghubungi layanan pelanggan lewat WhatsApp dari dalam aplikasi."
+      contactHelp: "Pengguna Ceritopia dan Cuplik serta pemain Bang Kurir bisa menulis ke help@jipraks.id. Pengguna FreeKasir bisa menghubungi layanan pelanggan lewat WhatsApp dari dalam aplikasi."
     },
     html: {
       heroTitle: 'Kami membangun aplikasi, game, otomasi, dan <span class="gradient-text">AI</span>.'
@@ -68,7 +75,9 @@
       altCtBooks: "Rak buku Ceritopia dengan sampul buku cerita bergambar yang penuh warna",
       altCtJimmy: "Jimmy, maskot Ceritopia, sedang membaca buku",
       altBkRide: "Gameplay Bang Kurir: mengendarai motor kurir di jalan kota dengan petunjuk GPS, peta mini, dan speedometer",
-      altBkCourier: "Kurir Bang Kurir di atas motor biru dengan boks pengiriman oranye"
+      altBkCourier: "Kurir Bang Kurir di atas motor biru dengan boks pengiriman oranye",
+      altCpEditor: "Editor Cuplik: daftar highlight AI dengan skor di kiri, pemutar video di tengah, serta awal, akhir, dan transkrip klip di kanan",
+      altCpClip: "Klip 9:16 hasil Cuplik dengan teks hook dan caption kata per kata"
     }
   };
 

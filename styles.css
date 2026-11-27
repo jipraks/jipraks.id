@@ -1,6 +1,6 @@
 /* Tokens from the Minimalist Modern design system, plus one tint pair per product.
    --accent-strong replaces #4D7CFF as the button gradient end: white on #4D7CFF is 3.72:1, on #2E66FF it is 4.71:1.
-   Product colors only appear inside their own product tile: FreeKasir blue, Ceritopia terracotta (both from their own sites). */
+   Product colors only appear inside their own product tile: FreeKasir blue, Ceritopia terracotta (both from their own sites), Cuplik red (from its app). */
 :root {
   --background: #FAFAFA;
   --foreground: #0F172A;
@@ -23,6 +23,9 @@
   /* Bang Kurir: the game's navy on a pale tint of its button yellow; its orange stays in the art. #0D2452 on it: 14.6:1. */
   --bk-tint: #FFF5D1;
   --bk-ink: #0D2452;
+  /* Cuplik: a deeper tone of the app's red (#D34033). White on it: 6.5:1; it on the tint: 5.7:1. */
+  --cp-tint: #FFECE9;
+  --cp-ink: #B3261E;
 
   --font-display: "Calistoga", Georgia, serif;
   --font-body: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
@@ -515,6 +518,11 @@ a {
   --ink: var(--bk-ink);
 }
 
+.product--cuplik {
+  background: var(--cp-tint);
+  --ink: var(--cp-ink);
+}
+
 .product :focus-visible {
   outline-color: var(--ink);
 }
@@ -673,6 +681,31 @@ a {
   transform: rotate(2deg);
 }
 
+/* Cuplik is a desktop app: its screens sit in wide frames, with a finished vertical clip in front. */
+.product--cuplik .device--back {
+  width: 70%;
+  max-width: 24rem;
+  right: 0;
+  top: 0;
+  transform: rotate(4deg);
+}
+
+.product--cuplik .device--front {
+  width: 78%;
+  max-width: 27rem;
+  left: 0;
+  top: 24%;
+  transform: rotate(-2deg);
+}
+
+.product--cuplik .poster--clip {
+  width: 30%;
+  max-width: 9.5rem;
+  right: 4%;
+  bottom: 0;
+  transform: rotate(4deg);
+}
+
 .product-visual .mascot--courier {
   width: 40%;
   max-width: 13rem;
@@ -698,7 +731,8 @@ a {
 }
 
 .product:hover .device--front,
-.product:hover .poster--books {
+.product:hover .poster--books,
+.product:hover .poster--clip {
   transform: rotate(0deg) translateY(-6px);
 }
 
@@ -946,11 +980,13 @@ a {
     align-items: center;
   }
 
-  .product--ceritopia .product-copy {
+  .product--ceritopia .product-copy,
+  .product--cuplik .product-copy {
     order: 2;
   }
 
-  .product--ceritopia {
+  .product--ceritopia,
+  .product--cuplik {
     border-radius: 1rem 4rem 1rem 4rem;
   }
 
@@ -1001,6 +1037,14 @@ a {
 
   .product--bangkurir:hover .device--front {
     transform: rotate(2deg);
+  }
+
+  .product--cuplik:hover .device--front {
+    transform: rotate(-2deg);
+  }
+
+  .product:hover .poster--clip {
+    transform: rotate(4deg);
   }
 
   .product:hover .poster--books {
