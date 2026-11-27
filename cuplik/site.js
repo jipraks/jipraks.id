@@ -1,18 +1,4 @@
-// Download buttons open the "coming soon" dialog until the Microsoft Store listing is live.
 (function () {
-  var dialog = document.getElementById("soon");
-  if (dialog && typeof dialog.showModal === "function") {
-    document.querySelectorAll("[data-soon]").forEach(function (btn) {
-      btn.addEventListener("click", function () {
-        dialog.showModal();
-      });
-    });
-    // Clicking the backdrop closes it too.
-    dialog.addEventListener("click", function (e) {
-      if (e.target === dialog) dialog.close();
-    });
-  }
-
   // GitHub star count: the HTML holds a recent number; refresh it from the API, cached per session.
   var el = document.querySelector("[data-stars]");
   if (!el || !window.fetch) return;
