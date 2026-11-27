@@ -33,8 +33,7 @@ Cloudflare Pages otomatis melayani `privacy-policy.html` di `/privacy-policy`.
 
 Dari folder ini: `npx serve .`
 
-## Yang masih perlu diperbarui
+## Microsoft Store
 
-- Badge Microsoft Store masih bertanda "Segera hadir" dan belum ditautkan. Setelah listing lolos sertifikasi, jadikan badge tautan ke https://apps.microsoft.com/detail/9PHPBBFP7PPH dan hapus label itu (`index.html` dan `en/index.html`)
-- Tombol "Download untuk Windows" masih membuka dialog "Segera hadir" (`site.js`). Setelah listing Store aktif, ganti tombolnya jadi tautan ke Store
-- `site.js` juga memperbarui jumlah bintang GitHub di footer dari API GitHub. Angka di HTML dipakai kalau API gagal
+- Listing Store: https://apps.microsoft.com/detail/9phpbbfp7pph. Tombol Download, badge Store, dan tautan di FAQ (`index.html` dan `en/index.html`) mengarah ke sana
+- `site.js` memperbarui jumlah bintang GitHub di footer dari API GitHub. Angka di HTML dipakai kalau API gagal
